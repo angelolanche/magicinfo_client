@@ -1,0 +1,69 @@
+{
+"logo":
+    {
+      "alt": "Porsche",
+      "path": "./../assets/porscheLogo.png"
+    },
+"fields": [
+    {
+      "name": "model",
+      "value": "Model",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "currentMileage",
+      "value": "Quilometragem atual",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "horsePower",
+      "value":"Potencia",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "gass",
+      "value": "Combustivel",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "modelYear",
+      "value": "Ano do modelo",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "exteriorColor",
+      "value": "Cor exterior",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "interiorColor",
+      "value": "Cor interior",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "vehicleRegistrationDate",
+      "value": "Primeiro emplacamento",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "outColor",
+      "value": "Cor exterior",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "previousOwners",
+      "value": "Donos anteriores",
+      "type": "text",
+      "required": true
+    }]
+}
+

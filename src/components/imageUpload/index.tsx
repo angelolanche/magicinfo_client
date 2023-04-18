@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ImageUpload({ register, errors }: any) {
+export function ImageUpload({ register, errors }: any) {
 
     return (
         <div>
