@@ -44,7 +44,6 @@ export function ApiProvider({ children }: ApiProviderProps) {
         const formDataImage = new FormData()
         
         formDataImage.append('image', image)
-        
         axios.post(baseURL + '/imageUpdate', {
             image: image,
             access_token: accessToken

@@ -1,7 +1,7 @@
-import { LogoContainerSup, SaveImageContainer, SaveImageButton, CarName, MainAttrLabel, MainAttrInput, CurrencyMark, PriceContainer, PriceInput, PriceLabel, BottomContainer, MainAttrContainer, OptAttrContainer, ControlNumber, LogoContainer, FormContainer, HeaderContainer, FieldsContainer, ButtonContainer, Button, FormLayout } from './styles'
+import { LogoContainerSup, SaveImageContainer, Border, SaveImageButton, SectionContainer, CarName, MainAttrLabel, MainAttrInput, CurrencyMark, PriceContainer, PriceInput, PriceLabel, BottomContainer, MainAttrContainer, OptAttrContainer, ControlNumber, LogoContainer, FormContainer, HeaderContainer, FieldsContainer, ButtonContainer, Button, FormLayout } from './styles'
 import formParams from '../../../public/data/porscheDetails.json'
 import Image from 'next/image';
-import { useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { TextAreaAutosize } from './../autosizeTextInput'
 
 import downloadjs from 'downloadjs';
@@ -16,7 +16,7 @@ interface FormData {
 }
 
 export function PorscheDetailsForm() {
-    const { register, formState: { errors } } = useForm<FormData>({
+    const { register } = useForm<FormData>({
         defaultValues: { message: '' }
     });
 
@@ -32,7 +32,7 @@ export function PorscheDetailsForm() {
 
     const { mainAttr, logo } = formParams
     return (
-        <>
+        <SectionContainer>
             <FormLayout id='formId'>
                 <LogoContainer>
                     <LogoContainerSup>
@@ -66,25 +66,24 @@ export function PorscheDetailsForm() {
                                             required={attr.required}
                                             {...register(attr.name, { required: attr.required })}>
                                         </MainAttrInput>
-                                        {errors[attr.name]?.type === 'required' && <span>Max length exceeded</span>}
                                     </div>
                                 ))
                             }
                         </MainAttrContainer>
                         <OptAttrContainer>
-                            <span>Opcionais do veiculo:</span>
+                            <span>Opcionais do veículo:</span>
                             <ul>
                                 <li>
                                     <TextAreaAutosize
-                                        id={'textArea1'} register={register} placeholder='escreva aqui' maxRows={16} />
+                                        id={'textArea1'} register={register} placeholder='escreva aqui (coluna 1)' maxRows={16} />
                                 </li>
                                 <li>
                                     <TextAreaAutosize
-                                        id={'textArea2'} register={register} placeholder='escreva aqui' maxRows={16} />
+                                        id={'textArea2'} register={register} placeholder='escreva aqui (coluna 2)' maxRows={16} />
                                 </li>
                                 <li>
                                     <TextAreaAutosize
-                                        id={'textArea3'} register={register} placeholder='escreva aqui' maxRows={16} />
+                                        id={'textArea3'} register={register} placeholder='escreva aqui (coluna 3)' maxRows={16} />
                                 </li>
                             </ul>
                         </OptAttrContainer>
@@ -102,8 +101,10 @@ export function PorscheDetailsForm() {
                 </BottomContainer>
             </FormLayout>
             <SaveImageContainer>
-                <SaveImageButton type="button" onClick={handleCaptureClick} >Salvar</SaveImageButton>
+                <Border>
+                    <SaveImageButton type="button" onClick={handleCaptureClick} >Salvar Layout</SaveImageButton>
+                </Border>
             </SaveImageContainer>
-        </>
+        </SectionContainer>
     )
 };

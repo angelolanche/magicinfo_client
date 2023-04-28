@@ -1,24 +1,28 @@
 import styled from 'styled-components'
 
+const SectionContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
 
 const FormLayout = styled.div`
-    max-width: 1920px;
-    max-height: 1080px;
+    width: 1920px;
+    height: 1080px;
     display: grid;  
     grid-template-rows: 1fr 1fr 1fr; 
     padding: 8rem 5rem 1rem;
-    gap: 4rem;
 `;
 
 const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
-    justify-items: center;
+    margin-bottom: 1rem;
 `;
 
 const LogoContainerSup = styled.div`
     display: flex;
-    max-width: 15vw; 
+    max-width: 288px; 
     height: auto; 
     max-height: 100%; 
 `;
@@ -60,7 +64,7 @@ const CarName = styled.input<{ error?: boolean }>`
 const ControlNumber = styled.input<{ error?: boolean }>`
     border: ${(props) => (props.error ? "1px solid red" : "none")};
     font-size: 1.5rem;
-    height: 33px;
+    height: 32px;
     
     &:focus-visible {
         outline: none;
@@ -87,7 +91,7 @@ const MainAttrContainer = styled.div`
 
 const MainAttrLabel = styled.label`
     font-weight: bolder;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     cursor: pointer;
     white-space: nowrap;
 `;
@@ -136,7 +140,7 @@ const BottomContainer = styled.div`
     padding-top: 1rem;
 
     > span {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         padding-top: 1.2rem;
     }
 `;
@@ -185,8 +189,28 @@ const Button = styled.button`
     margin-top: 8px;
 `;
 
-const SaveImageContainer = styled.div``;
+const SaveImageContainer = styled.div`
+    width: 100%;
+    padding: 0 12rem;
+`;
 
-const SaveImageButton = styled.button``;
+const Border = styled.div`
+    padding: 1rem 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+`
 
-export { FormLayout, LogoContainerSup, MainAttrInput, SaveImageContainer, SaveImageButton, CurrencyMark, BottomContainer, MainAttrContainer, OptAttrContainer, PriceContainer, PriceLabel, PriceInput, MainAttrLabel, CarName, ControlNumber, LogoContainer, FormContainer, HeaderContainer, FieldsContainer, ButtonContainer, Button }
+const SaveImageButton = styled.button`
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    background: #fff;
+
+    &:active {
+        background: #f6f6f6;
+    }
+`;
+
+export { FormLayout, Border, LogoContainerSup, SectionContainer, MainAttrInput, SaveImageContainer, SaveImageButton, CurrencyMark, BottomContainer, MainAttrContainer, OptAttrContainer, PriceContainer, PriceLabel, PriceInput, MainAttrLabel, CarName, ControlNumber, LogoContainer, FormContainer, HeaderContainer, FieldsContainer, ButtonContainer, Button }

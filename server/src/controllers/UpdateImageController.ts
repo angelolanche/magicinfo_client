@@ -7,6 +7,7 @@ import { uploadImageService } from './../services/uploadImageService'
 export class ImageUpdateController {
     async imageUpdate(req: Request, res: Response) {
         dotenv.config()
+        
         const { access_token } = req.body
         const image = req.file
         const playlistId = process.env.PORSCHE_PLAYLIST_ID as string
