@@ -36,7 +36,7 @@ export function PorscheDetailsForm() {
             <FormLayout id='formId'>
                 <LogoContainer>
                     <LogoContainerSup>
-                        <Image alt={logo.alt} src={logo.path} width={500} height={500} style={
+                        <Image alt={logo.alt} src={logo.path} width={288} height={179} style={
                             {
                                 display: "block",
                                 width: "100%",

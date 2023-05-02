@@ -18,13 +18,12 @@ const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
+    height: 140px
 `;
 
 const LogoContainerSup = styled.div`
     display: flex;
-    max-width: 288px; 
-    height: auto; 
-    max-height: 100%; 
+    width: 288px; 
 `;
 
 const HeaderContainer = styled.div` 

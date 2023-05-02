@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { StyledTextarea, StyledDiv } from './style'
+import { useCallback, useRef, useState } from 'react';
+import { StyledTextarea } from './style'
 import useAutosizeTextArea from './useAutosizetextArea';
 
 type Props = {

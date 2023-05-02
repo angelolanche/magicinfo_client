@@ -53,7 +53,7 @@ async function changeComponents() {
                         h2.style.cursor = 'text';
                         h2.style.fontSize = '3rem';
                         h2.style.fontWeight = 'bolder';
-
+                        h2.style.height = '70px';
                         input.parentElement?.replaceChild(h2, input);
                     });
 
