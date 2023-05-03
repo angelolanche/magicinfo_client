@@ -1,5 +1,5 @@
 import axios from 'axios'
-import dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
 
 interface iUpdatePlaylistSerivce {
     accessToken: string,

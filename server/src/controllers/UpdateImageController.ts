@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
 import { updatePlaylistService } from './../services/updatePlaylistService'
 import { AddImageToPlaylistService } from '../services/addImageToPlaylistService'
 import { uploadImageService } from './../services/uploadImageService'
