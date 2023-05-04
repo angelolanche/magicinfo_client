@@ -18,7 +18,6 @@ async function changeComponents() {
                         options.style.border = 'none';
                         options.style.paddingLeft = '0.5rem';
                         options.style.cursor = 'text';
-                        console.log('input: ', input)
 
                         input.parentElement?.replaceChild(options, input);
                     })
@@ -36,7 +35,6 @@ async function changeComponents() {
                         div.style.resize = 'none';
                         div.style.outline = 'none';
                         div.style.border = 'none';
-                        console.log('ta: ', div)
 
                         textArea.parentElement?.replaceChild(div, textArea);
                     })
@@ -54,6 +52,7 @@ async function changeComponents() {
                         h2.style.fontSize = '3rem';
                         h2.style.fontWeight = 'bolder';
                         h2.style.height = '70px';
+
                         input.parentElement?.replaceChild(h2, input);
                     });
 

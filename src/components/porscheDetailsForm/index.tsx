@@ -25,7 +25,7 @@ export function PorscheDetailsForm() {
 
         if (canvas) {
             const dataURL = canvas.toDataURL('image/png');
-            downloadjs(dataURL, 'download.png', 'image/png');
+            downloadjs(dataURL, 'Porsche-Toten-Layout.png', 'image/png');
         }
     };
 

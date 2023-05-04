@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "node dist/src/server.js",
     "watch": "tsc -p tsconfig.json --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepack": "tsc --noEmit false"
+    "prepack": "tsc --noEmit false",
+    "dev": "ts-node src/server.ts"
   },
   "author": "",
   "license": "ISC",

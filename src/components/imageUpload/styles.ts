@@ -38,6 +38,8 @@ const LabelButton = styled.label<{ isClicked: boolean }>`
 `;
 
 const PreviewContainer = styled.div`
+    display: flex;
+    justify-content: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 2rem;

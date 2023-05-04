@@ -5,35 +5,35 @@ const GlobalStyles = createGlobalStyle`
   font-family: 'PorscheNextTT';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/PorscheNextTTRegular.ttf') format('truetype');
+  src: url('/fonts/PorscheNextTTRegular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'PorscheNextTT';
   font-style: normal;
   font-weight: 100;
-  src: url('/assets/fonts/PorscheNextTTThin.ttf') format('truetype');
+  src: url('/fonts/PorscheNextTTThin.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'PorscheNextTT';
   font-style: italic;
   font-weight: 700;
-  src: url('/assets/fonts/PorscheNextTTBoldItalic.ttf') format('truetype');
+  src: url('/fonts/PorscheNextTTBoldItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'PorscheNextTT';
   font-style: italic;
   font-weight: 100;
-  src: url('/assets/fonts/PorscheNextTTThinItalic.ttf') format('truetype');
+  src: url('/fonts/PorscheNextTTThinItalic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'PorscheNextTT';
   font-style: normal;
   font-weight: 700;
-  src: url('/assets/fonts/PorscheNextTTBold.ttf') format('truetype');
+  src: url('/fonts/PorscheNextTTBold.ttf') format('truetype');
 }
 
 * {
