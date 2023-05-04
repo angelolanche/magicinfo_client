@@ -4,6 +4,8 @@ const SectionContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 1920px;
+    min-height: 1080px;
 `;
 
 const FormLayout = styled.div`
@@ -190,7 +192,8 @@ const Button = styled.button`
 
 const SaveImageContainer = styled.div`
     width: 100%;
-    padding: 0 12rem;
+    padding: 0 5rem;
+    min-width: 1920px;
 `;
 
 const Border = styled.div`

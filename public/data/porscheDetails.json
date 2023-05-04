@@ -2,7 +2,7 @@
 "logo":
     {
       "alt": "Porsche",
-      "path": "/../public/assets/porsche-logo.png"
+      "path": "/public/images/porsche-logo.png"
     },
 "mainAttr": [
     {

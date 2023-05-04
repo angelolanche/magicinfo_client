@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 const SectionContainer = styled.div`
-    padding: 0 12rem;
+    padding: 0 5rem;
+    width: 100%;
+    min-width: 1920px;
 `;
 
 const SelectContainer = styled.div`
