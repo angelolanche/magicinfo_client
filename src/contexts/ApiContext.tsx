@@ -27,7 +27,7 @@ export const useAPI = () => useContext(ApiContext)
 
 export function ApiProvider({ children }: ApiProviderProps) {
     const [accessToken, setAccessToken] = useState('')
-    
+
     useEffect(() => {
         api.get('/auth', {
         }).then(response => {
@@ -39,10 +39,10 @@ export function ApiProvider({ children }: ApiProviderProps) {
         })
     }, [])
 
-    const imageUpdateService = async (data: Data) => {
+    const imageUpdateService = (data: Data) => {
         const image = data.image[0]
         const formDataImage = new FormData()
-        
+
         formDataImage.append('image', image)
         axios.post(baseURL + '/imageUpdate', {
             image: image,
@@ -52,15 +52,16 @@ export function ApiProvider({ children }: ApiProviderProps) {
                 'accept': 'application/json',
                 'Content-Type': 'multipart/form-data'
             }
-    }
+        }
         ).then(response => {
             const data = response.data
-            console.log('sucesso: ', data)
+            return data;
         }).catch(error => {
             console.error('error: ', error)
+            return error
         })
     }
-    
+
     return (
         <ApiContext.Provider value={{ accessToken, imageUpdateService }}>
             {children}

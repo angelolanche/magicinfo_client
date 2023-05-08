@@ -16,6 +16,8 @@ const SelectContainer = styled.div`
 
     input {
         height: 0;
+        font-size: 0;
+        overflow: hidden;
     }
 `;
 

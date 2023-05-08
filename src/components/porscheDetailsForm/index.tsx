@@ -21,6 +21,7 @@ export function PorscheDetailsForm() {
     });
 
     const handleCaptureClick = async () => {
+        
         const canvas = await changeComponents()
 
         if (canvas) {
@@ -36,12 +37,12 @@ export function PorscheDetailsForm() {
             <FormLayout id='formId'>
                 <LogoContainer>
                     <LogoContainerSup>
-                        <Image alt={logo.alt} src='/images/porsche-logo.png' width={288} height={179} style={
+                        <Image className='image' alt={logo.alt} src='/images/porsche-logo.png' width={288} height={174} style={
                             {
                                 display: "block",
                                 width: "100%",
                                 height: "auto",
-                                objectFit: "contain"
+                                objectFit: "contain",
                             }} />
                     </LogoContainerSup>
                 </LogoContainer>

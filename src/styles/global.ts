@@ -56,17 +56,25 @@ const GlobalStyles = createGlobalStyle`
         font-size: 87.5%;
       }
     }
-    
+      html {
+          min-height: 1080px;
+          min-width: 1920px;
+          overflow: scrol;
+    }
+
+
     body {
       background-color: #fff;
       color: black;
+      min-height: 1080px;
+      min-width: 1920px;
       font-family: 'PorscheNextTT', sans-serif;
       transition: background-color 0.3s, color 0.3s;
-      /* overflow: hidden; */
-      ${media.lessThan('medium')`
-        overflow-x: hidden;
-        overflow-y: auto;
-       `}
+    }
+
+    .html2canvas-container { 
+        width: 3000px; 
+        height: 3000px; 
     }
 
     input,

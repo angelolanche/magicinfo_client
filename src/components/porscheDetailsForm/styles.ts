@@ -20,11 +20,12 @@ const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    height: 140px
+    width: 100%;
 `;
 
 const LogoContainerSup = styled.div`
     display: flex;
+    height: 144px;
     width: 288px; 
 `;
 
@@ -166,7 +167,6 @@ const CurrencyMark = styled.div`
         display: flex;
         font-size: 3rem;
         font-weight: bolder;
-        width: 50%;
         justify-content: end;
         margin: 0 1rem 0 3rem;
     }

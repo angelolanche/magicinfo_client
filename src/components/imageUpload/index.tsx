@@ -11,12 +11,20 @@ function ImageUpload() {
     const [previewImage, setPreviewImage] = useState<string>();
     const [isClicked, setIsClicked] = useState<boolean>(false);
     const [imageName, setImageName] = useState<string>();
+    const [isSubmitted, setIsSubmitted] = useState<boolean>(false)
 
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
     const { imageUpdateService } = useAPI()
 
-    const onSubmit: SubmitHandler<FormData> = data => {
-        imageUpdateService(data)
+    const onSubmit: SubmitHandler<FormData> = async (data) => {
+        try {
+            await imageUpdateService(data)
+            setIsSubmitted(true)
+        } catch (error) {
+            setIsSubmitted(false)
+            console.error('Submission failed: ', error)
+        }
+        reset();
     };
 
     const handleLabelClick = () => {
@@ -59,6 +67,7 @@ function ImageUpload() {
                 <SubmitImageContainer>
                     <SubmitButton type='submit'>enviar</SubmitButton>
                     {errors.image?.ref && !previewImage ? <span style={{ color: 'red', paddingLeft: '1rem' }}> *Sem imagem selecionada</span> : <></>}
+                    {isSubmitted && <span style={{ color: 'green', paddingLeft: '1rem' }}> Imagem enviada!</span>}
                 </SubmitImageContainer>
             </form >
         </SectionContainer>
