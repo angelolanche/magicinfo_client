@@ -60,6 +60,14 @@ const SubmitImageContainer = styled.div`
     display: flex;
     justify-content: end;
     align-items: center;
+
+    input {
+        margin: 0 1rem;
+        border-radius: 0.5rem;
+        padding: 0.2rem 0.5rem;
+        border: 1px solid gray;
+        height: 100%;
+    }
 `;
 
 const SubmitButton = styled.button`
