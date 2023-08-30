@@ -19,7 +19,8 @@ async function updatePlaylistService({ accessToken, playlistId }: iUpdatePlaylis
         }
     ).then(response => {
         const res = response.data
-
+        console.log('res: ', response)
+        
         return res
     }).catch(error => {
         console.error(error)
@@ -45,11 +46,12 @@ async function updatePlaylistService({ accessToken, playlistId }: iUpdatePlaylis
             contents: finalContents,
             contentCount: newContentCount
         }
-
+        
         return newPlaylistDetails
     }
 
     const playListData = editedPlaylistDetails(playlistDetails)
+    console.log('playlistDeta: ', playListData)
 
     if (playListData) {
         await axios.put(baseUrl + `/cms/playlists/${playlistId}`, playListData, {
@@ -60,7 +62,8 @@ async function updatePlaylistService({ accessToken, playlistId }: iUpdatePlaylis
             }
         }).then(response => {
             const res = response.data
-
+            
+            console.log('res2: ', response)
             return res
         }).catch(error => {
             console.error(error)

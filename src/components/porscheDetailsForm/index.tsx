@@ -48,7 +48,7 @@ export function PorscheDetailsForm() {
                 </LogoContainer>
                 <FormContainer>
                     <HeaderContainer>
-                        <CarName type='text' id='CarName' className='h2' placeholder='Nome do Carro' required={true}></CarName>
+                        <CarName type='text' id='CarName' className='h2' placeholder='Nome do Veículo' required={true}></CarName>
                         <div>
                             <label htmlFor='ControlNumber' >Número de controle: </label>
                             <ControlNumber type='text' className='h3' id='ControlNumber' required={true}></ControlNumber>

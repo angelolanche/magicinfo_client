@@ -11,14 +11,16 @@ export class ImageUpdateController {
         const { access_token } = req.body
         const image = req.file
         const playlistId = process.env.PORSCHE_PLAYLIST_ID as string
-
+         
         if (image) {
             try {
                 const contentId = await uploadImageService({ accessToken: access_token, image })
+                
                 await AddImageToPlaylistService({ accessToken: access_token, contentId, playlistId })
-                const updatedPlaylist = await updatePlaylistService({ accessToken: access_token, playlistId })
-
-                return res.json(updatedPlaylist)
+                await updatePlaylistService({ accessToken: access_token, playlistId })
+                
+                console.log('cid: ', contentId)
+                return res.json(contentId)
             } catch (error) {
                 console.error(error)
             }

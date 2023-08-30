@@ -8,6 +8,7 @@ interface iAddImageToPlaylistService {
 }
 
 async function AddImageToPlaylistService({ accessToken, contentId, playlistId }: iAddImageToPlaylistService) {
+    console.log('entrou addImage')
     dotenv.config()
     const baseUrl = process.env.API_ADDRESS
 
@@ -15,7 +16,8 @@ async function AddImageToPlaylistService({ accessToken, contentId, playlistId }:
         "contentIds": [contentId],
         "playlistIds": [playlistId]
     }
-
+    
+    console.log('contentData: ', contentData)
     await axios.put(baseUrl + '/cms/playlists/contents', contentData,
         {
             headers: {
@@ -24,6 +26,7 @@ async function AddImageToPlaylistService({ accessToken, contentId, playlistId }:
                 'Content-Type': 'application/json',
             }
         }).then(response => {
+            console.log('res: ', response)
             const res = response.data
 
             return res
