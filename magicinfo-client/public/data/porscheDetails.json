@@ -31,7 +31,7 @@
     },
     {
       "name": "gass",
-      "label": "Combustíve",
+      "label": "Combustível",
       "type": "text",
       "required": true
     },
