@@ -91,7 +91,7 @@ export function PorscheDetailsForm() {
                     </FieldsContainer>
                 </FormContainer >
                 <BottomContainer>
-                    <span>* Para consultar opções de financiamento fale com um dos nossos acessores</span>
+                    <span>* Para consultar opções de financiamento fale com um dos nossos assessores</span>
                     <PriceContainer>
                         <PriceLabel htmlFor={'price'}>Preço final</PriceLabel>
                         <CurrencyMark>
