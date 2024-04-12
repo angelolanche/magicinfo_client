@@ -19,7 +19,6 @@ export class ImageUpdateController {
                 await AddImageToPlaylistService({ accessToken: access_token, contentId, playlistId })
                 await updatePlaylistService({ accessToken: access_token, playlistId })
                 
-                console.log('cid: ', contentId)
                 return res.json(contentId)
             } catch (error) {
                 console.error(error)
