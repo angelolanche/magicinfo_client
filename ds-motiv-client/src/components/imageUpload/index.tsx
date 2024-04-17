@@ -35,26 +35,26 @@ function ImageUpload() {
     const { imageUpdateService } = useAPI()
 
     const onSubmit: SubmitHandler<FormData> = async (data) => {
-        try {
-            const imageUpdate = await imageUpdateService(data)
+        // try {
+        //     const imageUpdate = await imageUpdateService(data)
 
-            if (imageUpdate && !imageUpdate.error) {
-                setIsSubmitted({ error: '', submitted: true })
-                setPreviewImage({ name: '', img: '' })
-                reset()
+        //     if (imageUpdate && !imageUpdate.error) {
+        //         setIsSubmitted({ error: '', submitted: true })
+        //         setPreviewImage({ name: '', img: '' })
+        //         reset()
 
-                return
-            }
+        //         return
+        //     }
 
-            if (imageUpdate && imageUpdate.error) {
-                setIsSubmitted({ error: imageUpdate.error, submitted: false })
+        //     if (imageUpdate && imageUpdate.error) {
+        //         setIsSubmitted({ error: imageUpdate.error, submitted: false })
 
-                return
-            }
-        } catch (error) {
-            setIsSubmitted({ submitted: false })
-            console.error('Submission failed: ', error)
-        }
+        //         return
+        //     }
+        // } catch (error) {
+        //     setIsSubmitted({ submitted: false })
+        //     console.error('Submission failed: ', error)
+        // }
     };
 
     const handleLabelClick = () => {

@@ -1,0 +1,172 @@
+{
+"logo":
+    {
+      "alt": "Porsche",
+      "path": "/public/images/porsche-logo.png"
+    },
+"mainAttr": [
+    {
+      "name": "model",
+      "label": "Modelo",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "currentMileage",
+      "label": "Quilometragem atual",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "horsePower",
+      "label":"Potência",
+      "type": "text",
+      "required": true
+    },
+    {
+        "name": "transmission",
+        "label": "Transmissão",
+        "type": "text",
+        "required": true
+    },
+    {
+      "name": "gass",
+      "label": "Combustível",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "modelYear",
+      "label": "Ano do modelo",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "exteriorColor",
+      "label": "Cor exterior",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "interiorColor",
+      "label": "Cor interior",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "vehicleRegistrationDate",
+      "label": "Primeiro emplacamento",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "previousOwners",
+      "label": "Donos anteriores",
+      "type": "text",
+      "required": true
+    }
+],
+"options": [
+    {
+        "name": "Teto solar elétrico em vidro",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Saias laterais na cor exterior",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Frisos da janela lateral em preto (brilhante)",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Entradas de ar na parte traseira pintadas em preto (alto brilho)",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Projeção de Logo PORSCHE iluminado nas portas",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Faixa luminosa Exclusive com logo ‘PORSCHE’ em preto",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Designação do modelo em preto brilhante",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Sistema de escape esportivo (incluindo saídas de escape em preto)",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Direção Assistida Plus",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Rodas 20/21” 911 Turbo S",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Aquecimento dos bancos (dianteiros)",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Pacote porta-objetos",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Quebra-sol em alcantara®",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Volante multifuncional Sport GT aquecível em Race-Tex e detalhes de acabamento em carbono",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Tampa do depósito de armazenagem central em Race-Tex com logo Porsche",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Chave pintada na cor exterior com chaveiro em Race-Tex",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Pacote de interior em carbono",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Soleira das portas iluminadas em carbono fosco",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Faróis escurecidos em LED Matrix incluindo Porsche Dynamic Light System Plus (PDLS Plus)",
+        "type": "text",
+        "required": false
+    },
+    {
+        "name": "Lanternas traseiras Exclusive",
+        "type": "text",
+        "required": false
+    }
+]
+}
+
