@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import View from './components/view.tsx'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import View from './components/view.tsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <App /> ,
   },
   {
     path: "/view",
@@ -18,5 +18,5 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </ React.StrictMode>
 )

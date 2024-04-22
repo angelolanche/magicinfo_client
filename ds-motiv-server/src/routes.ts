@@ -16,5 +16,5 @@ const upload = multer({ storage: storage })
 
 routes.post('/auth', verifyPasswordMiddleware, authController.getAccessToken);
 routes.post('/imageUpdate', upload.single('image'), verifyPasswordMiddleware, imageUpdateController.imageUpdate);
-
+routes.get('/view')
 export { routes }
