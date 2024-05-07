@@ -181,15 +181,6 @@ const PriceInput = styled.input`
   width: 100%;
 `;
 
-const ButtonContainer = styled.div`
-    margin-top: 4px;
-    padding: 4px;
-`;
-
-const Button = styled.button`
-    margin-top: 8px;
-`;
-
 const SaveImageContainer = styled.div`
     width: 100%;
     padding: 0 5rem;
@@ -215,4 +206,4 @@ const SaveImageButton = styled.button`
     }
 `;
 
-export { FormLayout, Border, LogoContainerSup, SectionContainer, MainAttrInput, SaveImageContainer, SaveImageButton, CurrencyMark, BottomContainer, MainAttrContainer, OptAttrContainer, PriceContainer, PriceLabel, PriceInput, MainAttrLabel, CarName, ControlNumber, LogoContainer, FormContainer, HeaderContainer, FieldsContainer, ButtonContainer, Button }
+export { FormLayout, Border, LogoContainerSup, SectionContainer, MainAttrInput, SaveImageContainer, SaveImageButton, CurrencyMark, BottomContainer, MainAttrContainer, OptAttrContainer, PriceContainer, PriceLabel, PriceInput, MainAttrLabel, CarName, ControlNumber, LogoContainer, FormContainer, HeaderContainer, FieldsContainer }

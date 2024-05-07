@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import media from 'styled-media-query'
+
 const GlobalStyles = createGlobalStyle`
 @font-face {
   font-family: 'PorscheNextTT';

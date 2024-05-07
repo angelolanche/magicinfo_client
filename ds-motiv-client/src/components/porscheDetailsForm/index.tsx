@@ -1,4 +1,4 @@
-import { LogoContainerSup, SaveImageContainer, Border, SaveImageButton, SectionContainer, CarName, MainAttrLabel, MainAttrInput, CurrencyMark, PriceContainer, PriceInput, PriceLabel, BottomContainer, MainAttrContainer, OptAttrContainer, ControlNumber, LogoContainer, FormContainer, HeaderContainer, FieldsContainer, ButtonContainer, Button, FormLayout } from './styles'
+import { LogoContainerSup, SaveImageContainer, Border, SaveImageButton, SectionContainer, CarName, MainAttrLabel, MainAttrInput, CurrencyMark, PriceContainer, PriceInput, PriceLabel, BottomContainer, MainAttrContainer, OptAttrContainer, ControlNumber, LogoContainer, FormContainer, HeaderContainer, FieldsContainer, FormLayout } from './styles'
 import formParams from '../../../public/data/porscheDetails.json'
 import { useForm } from "react-hook-form";
 import { TextAreaAutosize } from './../autosizeTextInput'
