@@ -1,38 +1,48 @@
-import axios from 'axios'
 import * as dotenv from 'dotenv'
+import AWS from 'aws-sdk'
 
 interface iUploadImageService {
-    accessToken: string,
-    image: any
+    image: Image
 }
 
-async function uploadImageService({ accessToken, image }: iUploadImageService) {
+type Image = {
+    fieldname: string,
+    originalname: string,
+    encoding: string,
+    mimetype: string,
+    buffer: any,
+    size: number
+}
+
+
+
+async function uploadImageService({ image }: iUploadImageService) {
     dotenv.config()
-    const baseUrl = process.env.API_ADDRESS
+    
+    AWS.config.update({
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: process.env.AWS_ACCESS_KEY,
+        region: process.env.AWS_BUCKET_REGION
+    })
 
-    const data = new FormData()
-    const blob = new Blob([image.buffer], { type: image.mimetype })
+    const bucketName = process.env.AWS_BUCKET_NAME
+    const imageName = process.env.PORSCH_IMAGE_NAME
+    const params = {
+        Bucket: bucketName || "",
+        Key: `${imageName}`,
+        Body: image.buffer,
+        ContentType: image.mimetype
+    }
+    const s3 = new AWS.S3()
+    const upload = s3.putObject(params)
 
-    data.append('contentType', 'IMAGE')
-    data.append('files', blob, image.originalname)
-    data.append('groupId', '0')
+    const imageUploadResponse = upload.promise().then(
+        (data) => {
+            console.log("successfuly uploaded image!")
+        }
+    )
 
-    const contentId = await axios.post(baseUrl + '/cms/contents/files', data,
-        {
-            headers: {
-                'api_key': accessToken,
-                'Accept': 'application/json; charset=utf-8',
-                'Content-Type': 'multipart/form-data',
-            }
-        }).then((response) => {
-            const { contentId } = response.data.items
-
-            return contentId
-        }).catch((error) => {
-            console.error(error)
-        })
-
-    return contentId
+    return imageUploadResponse
 }
 
 export { uploadImageService }
